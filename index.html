@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+
+        .myDiv {
+            border: 5px outset red;
+            text-align: center;
+            margin-top:1%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            margin:auto;
+            padding: 20px;
+            margin-bottom:35px;
+
+
+        }
+        button{
+            height:30px;
+            width:100px;
+            position:relative;
+            top:50%;
+        }
+
+
+        .header a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        .header-right {
+            float:left;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h3 style="margin:auto">AYŞENUR KAYA -YOUR BEST STUDENT</h3>
+    <div class="header-right">
+        <button onclick="scrollinfo('doctype')" id="doctype-menu">DOCTYPE</button>
+        <button onclick="scrollinfo('html')" id="html-menu">HTML</button>
+        <button onclick="scrollinfo('meta')" id="meta-menu">META</button>
+        <button onclick="scrollinfo('body')"id="body-menu">BODY</button>
+        <button onclick="scrollinfo('title')"id="title-menu">TITLE</button>
+        <button onclick="scrollinfo('b')"id="b-menu">B</button>
+        <button onclick="scrollinfo('br')"id="br-menu">BR</button>
+        <button onclick="scrollinfo('p')"id="p-menu">P</button>
+        <button onclick="scrollinfo('i')"id="i-menu">I</button>
+        <button onclick="scrollinfo('em')"id="em-menu">EM</button>
+        <button onclick="scrollinfo('strong')"id="strong-menu">STRONG</button>
+        <button onclick="scrollinfo('ımg')"id="img-menu">IMG</button>
+        <button onclick="scrollinfo('a')"id="a-menu">A</button>
+    </div>
+</div>
+
+<div class="myDiv">
+    <h2>DOCTYPE etiketi</h2>
+    <h3 id="doctype">Doctype, internet sayfaları hazırlarken sayfanızın hangi türe ait olduğunu internet tarayıcısına
+        bildirmek
+        amacıyla kullanılan bir bildirme etiketidir.</h3>
+</div>
+<div class="myDiv">
+    <h2>HTML etiketi</h2>
+    <h3 id="html">HTML etiketi,tarayıcıya dosyanın HTML kodu ile yüklenmiş bilgi içerdiğini bildirir.Dosya adındaki .
+        html
+        uzantısı ise bu dosyanın bir HTML belgesi olduğunu belirtir.</h3>
+</div>
+<div class="myDiv">
+    <h2>META etiketi</h2>
+    <h3 id="meta">Meta Tag,web sitelerin bilgi ekleridir. Meta tag kullanımının asıl amacı ise, kullanıcıya web sitesi hakkında
+        bilgi vermektir.</h3>
+</div>
+<div class="myDiv">
+    <h2>BODY etiketi</h2>
+    <h3 id ="body">Genel olarak tasarım yaparken body etiketleri arasında çalışırız. Yani body etiketi bir html dosyanın en önemli
+        kısmıdır.</h3>
+</div>
+<div class="myDiv">
+    <h2>TITLE etiketi</h2>
+    <h3 id="title">Bu etiket sayfa isminin belirtilmesini sağlar. Yani tarayıcı sekmesini temsil eden adı kapsar.</h3>
+</div>
+<div class="myDiv">
+    <h2>B etiketi</h2>
+    <h3 id="b">B etiketi ile metnin daha kalın yazılmasını sağlarız.</h3>
+</div>
+<div class="myDiv">
+    <h2>BR etiketi</h2>
+    <h3 id="br">BR etiketi bulunduğumuz satırdan bir satır aşağı geçmek için kullanılır.</h3>
+</div>
+<div class="myDiv">
+    <h2>P etiketi</h2>
+    <h3 id="p">P etiketi paragraf şeklinde ki yazım için kullanılır.</h3>
+</div>
+<div class="myDiv">
+    <h2>İ etiketi</h2>
+    <h3 id="i">Metindeki içerik italic olarak görünür.</h3>
+</div>
+<div class="myDiv">
+    <h2>EM etiketi</h2>
+    <h3 id="em">em etiketi ifade/tümce etiketidir. Vurgulanmış metin olarak yorumlanır.</h3>
+</div>
+<div class="myDiv">
+    <h2>STRONG etiketi</h2>
+    <h3 id="strong">b etiketi gibidir.Metnin daha kalın yazılmasını sağlar.</h3>
+</div>
+<div class="myDiv">
+    <h2>IMG etiketi</h2>
+    <h3 id="ımg">HTML belgeleri için görüntü(resim)tanımlar.</h3>
+</div>
+<div class="myDiv">
+    <h2>A etiketi</h2>
+    <h3 id="a">Web sayfaları arasında geçişi sağlamak yani link vermek için kullanılır.</h3>
+</div>
+
+
+<div id="doctype-info" style="padding-left:20px">
+
+</div>
+
+</body>
+
+<script>
+
+    async function scrollinfo(id) {
+        document.getElementById(id).scroll();
+        await sleep(200);
+        document.getElementById(id).style.backgroundColor = "rgba(221,221,221,0.51)";
+
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+</script>
+</html>
